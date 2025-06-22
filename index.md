@@ -1,80 +1,76 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>L.I.S.I. – Laboratory of Integrated Science & Innovation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LISIInnovationLab</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
       background-color: #f9f9f9;
       color: #333;
     }
-
-    header {
-      background-color: #002f4b;
-      color: white;
-      padding: 20px;
+    img {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 200px;
+    }
+    h1, h2 {
       text-align: center;
+      color: #1a1a1a;
     }
-
-    .logo {
-      max-height: 100px;
-      margin-bottom: 10px;
-    }
-
-    main {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      border-radius: 8px;
-    }
-
-    h1 {
-      font-size: 28px;
-      color: #002f4b;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #0077cc;
+    a.button {
+      display: block;
+      width: fit-content;
+      margin: 1rem auto;
+      padding: 0.75rem 1.5rem;
+      background-color: #004aad;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
       font-weight: bold;
+      border-radius: 6px;
     }
-
-    .btn:hover {
-      background-color: #005fa3;
+    a.button:hover {
+      background-color: #00307a;
+    }
+    section {
+      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo-lisi.png" alt="Logomarca do L.I.S.I." class="logo" />
-    <h1>Bem-vindo ao L.I.S.I.</h1>
-  </header>
 
-  <main>
+  <img src="logo-lisi.png" alt="Logomarca do L.I.S.I.">
+
+  <h1>LISIInnovationLab</h1>
+  <h2>Bem-vindo ao L.I.S.I.</h2>
+
+  <section>
     <p>
       O <strong>L.I.S.I. – Laboratório de Ciência Integrada & Inovação</strong> é um laboratório aberto, interdisciplinar e internacional dedicado à pesquisa, desenvolvimento e inovação nas áreas de Inteligência Artificial, Computação Quântica, Ética Digital e Educação Científica.
     </p>
-
     <p>
       Nosso propósito é promover soluções tecnológicas éticas e de impacto social, integrando ciência, tecnologia e governança para um futuro cognitivo e colaborativo.
     </p>
 
-    <a href="https://forms.gle/https://forms.gle/NtqNs9W" class="btn">Clique aqui para se inscrever no L.I.S.I.</a>
-  </main>
+    <a class="button" href="https://forms.gle/NtqNs9Wt1mBdvKUF9k" target="_blank">Clique aqui para se inscrever no L.I.S.I.</a>
+  </section>
+
+  <section>
+    <h2>Sobre o L.I.S.I.</h2>
+    <p>
+      Atuamos como catalisadores de projetos estratégicos, desenvolvedores de talentos e articuladores internacionais. Nosso trabalho é orientado por ciência aberta, ética digital, sustentabilidade e inovação aplicada aos desafios reais da sociedade.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contato</h2>
+    <p>Email: jucelio.consultor@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/jucelio-sinthesys/LISIInnovationLab" target="_blank">github.com/jucelio-sinthesys/LISIInnovationLab</a></p>
+  </section>
+
 </body>
 </html>
