@@ -9,95 +9,91 @@
       background-color: #ffffff;
       color: #333;
       margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
       padding: 40px 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
     }
 
-    .logo {
-      max-width: 200px;
-      margin-bottom: 20px;
+    header img {
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 280px;
+      height: auto;
     }
 
     h1 {
-      font-size: 28px;
       color: #004aad;
+      font-size: 28px;
+      text-align: center;
     }
 
     p {
       font-size: 18px;
       line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    .button {
+    a.button {
       display: inline-block;
-      margin-top: 30px;
-      padding: 12px 25px;
-      background-color: #004aad;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
+      padding: 12px 24px;
+      margin: 10px 10px;
       font-size: 16px;
+      color: #fff;
+      background-color: #004aad;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
 
-    .button:hover {
-      background-color: #003580;
+    a.button:hover {
+      background-color: #002f73;
+    }
+
+    .lang-button {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 16px;
     }
 
     footer {
       margin-top: 40px;
+      text-align: center;
       font-size: 14px;
       color: #777;
-    }
-
-    a {
-      color: #004aad;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- Logo -->
-    <img src="../logo-lisi.png" alt="L.I.S.I. Logo" class="logo">
-
-    <!-- Title -->
-    <h1>L.I.S.I. – Laboratory of Integrated Science & Innovation</h1>
-
-    <!-- Presentation -->
-    <p>
-      L.I.S.I. is an open, interdisciplinary, and international laboratory dedicated to research, development, and innovation in the areas of Artificial Intelligence, Quantum Computing, Digital Ethics, and Scientific Education.
-    </p>
-
-    <p>
-      Our purpose is to promote ethical and socially impactful technological solutions by integrating science, technology, and governance for a cognitive and collaborative future.
-    </p>
-
-    <!-- Subscription Button -->
-    <a class="button" href="https://forms.gle/DsEy9J7SHXqwVjCF8" target="_blank" rel="noopener noreferrer">
-      Click here to join L.I.S.I.
-    </a>
-
-    <!-- Language Switch -->
-    <p style="margin-top: 30px;">
-      <a href="../index.html">🌐 Ver em Português</a>
-    </p>
-
-    <!-- Contact -->
-    <p style="margin-top: 40px;">
-      <strong>Contact:</strong> jucelio.consultor@gmail.com<br>
-      <strong>GitHub:</strong> <a href="https://github.com/jucelio-sinthesys" target="_blank">github.com/jucelio-sinthesys</a>
-    </p>
+  <div class="lang-button">
+    <a href="../index.html">🌐 Português</a>
   </div>
 
+  <header>
+    <img src="../logo.png" alt="L.I.S.I. Logo">
+  </header>
+
+  <h1>L.I.S.I. – Laboratory of Integrated Science & Innovation</h1>
+
+  <p>
+    L.I.S.I. is an open, interdisciplinary, and international laboratory dedicated to research, development, and innovation in the areas of Artificial Intelligence, Quantum Computing, Digital Ethics, and Scientific Education.
+  </p>
+
+  <p>
+    Our purpose is to promote ethical and socially impactful technological solutions by integrating science, technology, and governance for a cognitive and collaborative future.
+  </p>
+
+  <p>
+    <a class="button" href="https://forms.gle/DsEy9J7SHXqwVjCF8" target="_blank">📝 Join L.I.S.I.</a>
+    <a class="button" href="manifesto.html">📜 Read the Manifesto</a>
+  </p>
+
   <footer>
-    &copy; 2025 LISIInnovationLab. All rights reserved.
+    &copy; 2025 LISIInnovationLab
   </footer>
 
 </body>
