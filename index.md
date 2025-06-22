@@ -1,59 +1,81 @@
-<img src="logo-lisi.png" alt="Logomarca do L.I.S.I." width="220" style="display:block; margin:auto;" />
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L.I.S.I. – Laboratory of Integrated Science & Innovation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-# L.I.S.I. – Laboratory of Integrated Science & Innovation
+    header {
+      background-color: #002f4b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-## Bem-vindo ao L.I.S.I.
+    .logo {
+      max-height: 100px;
+      margin-bottom: 10px;
+    }
 
-O **L.I.S.I. – Laboratório de Ciência Integrada & Inovação** é um laboratório aberto, interdisciplinar e internacional dedicado à pesquisa, desenvolvimento e inovação nas áreas de Inteligência Artificial, Computação Quântica, Ética Digital e Educação Científica.
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      border-radius: 8px;
+    }
 
-Nosso propósito é promover soluções tecnológicas éticas e de impacto social, integrando ciência, tecnologia e governança para um futuro cognitivo e colaborativo.
+    h1 {
+      font-size: 28px;
+      color: #002f4b;
+    }
 
-[Clique aqui para se inscrever no L.I.S.I. e fazer parte da rede](https://forms.gle/NtqNs9Wt1mBdvKUF9k)
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
 
----
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
 
-## Atuação Global
+    .btn:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo-lisi.png" alt="Logomarca do L.I.S.I." class="logo" />
+    <h1>Bem-vindo ao L.I.S.I.</h1>
+  </header>
 
-O L.I.S.I. atua como catalisador de projetos estratégicos, formação de talentos e articulação internacional, buscando transformar desafios globais em oportunidades de desenvolvimento sustentável.
+  <main>
+    <p>
+      O <strong>L.I.S.I. – Laboratório de Ciência Integrada & Inovação</strong> é um laboratório aberto, interdisciplinar e internacional dedicado à pesquisa, desenvolvimento e inovação nas áreas de Inteligência Artificial, Computação Quântica, Ética Digital e Educação Científica.
+    </p>
 
-Promovemos a criação de um ecossistema científico globalmente conectado, colaborativo e orientado para resultados concretos, com foco em inovação ética, ciência aberta e impacto social positivo.
+    <p>
+      Nosso propósito é promover soluções tecnológicas éticas e de impacto social, integrando ciência, tecnologia e governança para um futuro cognitivo e colaborativo.
+    </p>
 
----
-
-## Áreas de Foco
-
-- Inteligência Artificial (IA)
-- Computação Quântica
-- Ética Digital e Governança de Dados
-- Educação Científica e Inclusiva
-- Ontologias, PLN e Interpretação de Políticas Públicas
-- Laboratórios Virtuais e Colaboração Global
-
----
-
-## Nossa Estrutura Digital
-
-- Repositórios abertos no GitHub
-- Hospedagem em nuvem gratuita
-- Infraestrutura de colaboração com ferramentas livres
-- Parcerias com redes internacionais
-- Ciência aberta, ética e distribuída
-
----
-
-## Projetos em Andamento
-
-- **Projeto Piloto #1**: IA para Interpretação Automatizada de Políticas Públicas (PLN + Ontologias)
-- **Plataforma de adesão e mobilização de colaboradores**
-- **Afiliação internacional a redes científicas globais**
-
----
-
-## Contato
-
-- **Email:** jucelio.consultor@gmail.com  
-- **GitHub:** [github.com/jucelio-sinthesys/LISIInnovationLab](https://github.com/jucelio-sinthesys/LISIInnovationLab)
-
----
-
-### Versão em inglês em breve | English version coming soon
+    <a href="https://forms.gle/https://forms.gle/NtqNs9W" class="btn">Clique aqui para se inscrever no L.I.S.I.</a>
+  </main>
+</body>
+</html>
