@@ -1,31 +1,75 @@
-# 📜 Manifesto L.I.S.I.
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Manifesto do L.I.S.I.</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      margin: 0;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-**L.I.S.I. – Laboratory of Integrated Science & Innovation** nasce como um laboratório internacional, digital, ético e inclusivo. Sua missão é articular ciência, tecnologia e inovação com impacto social e propósito humanista.
+    h1 {
+      color: #004aad;
+      font-size: 28px;
+      text-align: center;
+    }
 
----
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
 
-## 🌍 Princípios Norteadores
+    a {
+      color: #004aad;
+    }
 
-1. **Ciência Aberta e Colaborativa**
-   - Compartilhamento de conhecimento, código e dados abertos.
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
 
-2. **Tecnologia com Propósito**
-   - Aplicações reais, com foco no bem público e na redução de desigualdades.
+  <h1>Manifesto do L.I.S.I.</h1>
 
-3. **Ética Digital e Responsabilidade**
-   - IA explicável, computação segura e respeito aos direitos humanos.
+  <p>
+    O L.I.S.I. é um laboratório aberto, interdisciplinar e internacional dedicado à pesquisa, desenvolvimento e inovação nas áreas de Inteligência Artificial, Computação Quântica, Ética Digital e Educação Científica.
+  </p>
 
-4. **Integração Cognitiva**
-   - Interdisciplinaridade entre IA, Quântica, Direito, Saúde, Educação e Sustentabilidade.
+  <p>
+    Nosso propósito é promover soluções tecnológicas éticas e de impacto social, integrando ciência, tecnologia e governança para um futuro cognitivo e colaborativo.
+  </p>
 
-5. **Cidadania Científica**
-   - Inclusão de jovens, professores, gestores e cidadãos no processo de construção tecnológica.
+  <p>
+    Atua como catalisador de projetos estratégicos, formação de talentos e articulação internacional, buscando transformar desafios globais em oportunidades de desenvolvimento sustentável.
+  </p>
 
----
+  <p>
+    O laboratório fomenta a colaboração entre pesquisadores, desenvolvedores, educadores e instituições, promovendo a formação de talentos especializados e a criação de um ecossistema globalmente conectado.
+  </p>
 
-## 🌐 Nosso Compromisso
+  <p>
+    A atuação do L.I.S.I. se dá por meio de uma rede distribuída de colaboradores, laboratórios virtuais, parcerias internacionais e infraestrutura digital de ponta, com ênfase na transparência, sustentabilidade e inovação aberta.
+  </p>
 
-Ser um **nó global** de inovação aplicada, comprometido com o futuro cognitivo, cooperativo e distribuído da ciência.
+  <p>
+    Além disso, o laboratório promove eventos, cursos e publicações para difundir conhecimento e estimular a adoção de práticas responsáveis em tecnologia.
+  </p>
 
-_"O futuro é ético, inteligente e colaborativo."_  
-Equipe L.I.S.I.
+  <footer>
+    &copy; 2025 LISIInnovationLab
+  </footer>
+
+</body>
+</html>
