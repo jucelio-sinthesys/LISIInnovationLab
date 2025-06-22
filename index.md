@@ -8,11 +8,11 @@ O **L.I.S.I. – Laboratório de Ciência Integrada & Inovação** é um laborat
 
 Nosso propósito é promover soluções tecnológicas éticas e de impacto social, integrando ciência, tecnologia e governança para um futuro cognitivo e colaborativo.
 
-[👉 Clique aqui para se inscrever no L.I.S.I. e fazer parte da rede](https://forms.gle/NtqNs9Wt1mBdvKUF9k)
+[Clique aqui para se inscrever no L.I.S.I. e fazer parte da rede](https://forms.gle/NtqNs9Wt1mBdvKUF9k)
 
 ---
 
-## 🌍 Atuação Global
+## Atuação Global
 
 O L.I.S.I. atua como catalisador de projetos estratégicos, formação de talentos e articulação internacional, buscando transformar desafios globais em oportunidades de desenvolvimento sustentável.
 
@@ -20,7 +20,7 @@ Promovemos a criação de um ecossistema científico globalmente conectado, cola
 
 ---
 
-## 🚀 Áreas de Foco
+## Áreas de Foco
 
 - Inteligência Artificial (IA)
 - Computação Quântica
@@ -31,7 +31,7 @@ Promovemos a criação de um ecossistema científico globalmente conectado, cola
 
 ---
 
-## 🧩 Nossa Estrutura Digital
+## Nossa Estrutura Digital
 
 - Repositórios abertos no GitHub
 - Hospedagem em nuvem gratuita
@@ -41,7 +41,7 @@ Promovemos a criação de um ecossistema científico globalmente conectado, cola
 
 ---
 
-## 📈 Projetos em Andamento
+## Projetos em Andamento
 
 - **Projeto Piloto #1**: IA para Interpretação Automatizada de Políticas Públicas (PLN + Ontologias)
 - **Plataforma de adesão e mobilização de colaboradores**
@@ -49,11 +49,11 @@ Promovemos a criação de um ecossistema científico globalmente conectado, cola
 
 ---
 
-## 📬 Contato
+## Contato
 
 - **Email:** jucelio.consultor@gmail.com  
 - **GitHub:** [github.com/jucelio-sinthesys/LISIInnovationLab](https://github.com/jucelio-sinthesys/LISIInnovationLab)
 
 ---
 
-### 🌐 Versão em inglês em breve | English version coming soon
+### Versão em inglês em breve | English version coming soon
