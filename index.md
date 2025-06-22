@@ -1,10 +1,10 @@
-# 🌐 L.I.S.I. – Laboratory of Integrated Science & Innovation
+# L.I.S.I. – Laboratory of Integrated Science & Innovation
 
 **Bem-vindo ao portal oficial do L.I.S.I.**, um laboratório digital, internacional e interdisciplinar, voltado à inovação com ética e impacto.
 
 ---
 
-## 🎯 Nossos eixos de atuação:
+## Nossos eixos de atuação:
 
 - Inteligência Artificial Ética e Acessível
 - Computação Quântica para problemas reais
@@ -13,7 +13,7 @@
 
 ---
 
-## 🚀 O que já iniciamos:
+## O que já iniciamos:
 
 - Repositório aberto de projetos, protótipos e cursos
 - Afiliação às redes QWorld, Hugging Face, IBM Quantum
@@ -23,7 +23,7 @@
 ---
 
 **Quer colaborar?**  
-👉 [Clique aqui para preencher o formulário de adesão](https://forms.gle/xxxxxxxx)
+[Clique aqui para preencher o formulário de adesão](https://forms.gle/xxxxxxxx)
 
 ---
 
