@@ -1,32 +1,22 @@
-# L.I.S.I. – Laboratory of Integrated Science & Innovation
+---
+title: L.I.S.I. - Laboratory of Integrated Science & Innovation
+---
 
-**Bem-vindo ao portal oficial do L.I.S.I.**, um laboratório digital, internacional e interdisciplinar, voltado à inovação com ética e impacto.
+# Bem-vindo ao L.I.S.I.
+
+O L.I.S.I. é um laboratório aberto, interdisciplinar e internacional dedicado à pesquisa, desenvolvimento e inovação nas áreas de Inteligência Artificial, Computação Quântica, Ética Digital e Educação Científica.
+
+[Participe do L.I.S.I.! Inscreva-se aqui](https://forms.gle/NtqNs9Wt1mBdvKUF9)
 
 ---
 
-## Nossos eixos de atuação:
+## Sobre o L.I.S.I.
 
-- Inteligência Artificial Ética e Acessível
-- Computação Quântica para problemas reais
-- Ciência Aberta e Dados para o Bem Comum
-- Formação de talentos e inclusão digital
+Nosso propósito é promover soluções tecnológicas éticas e de impacto social, integrando ciência, tecnologia e governança para um futuro cognitivo e colaborativo.
 
 ---
 
-## O que já iniciamos:
+## Contato
 
-- Repositório aberto de projetos, protótipos e cursos
-- Afiliação às redes QWorld, Hugging Face, IBM Quantum
-- Primeiras publicações técnicas no arXiv e Zenodo
-- Convite a colaboradores globais
-
----
-
-**Quer colaborar?**  
-[Clique aqui para preencher o formulário de adesão](https://forms.gle/xxxxxxxx)
-
----
-
-> "O futuro é cognitivo, distribuído e colaborativo."  
-> Equipe L.I.S.I.
-
+- Email: seuemail@dominio.com  
+- GitHub: https://github.com/seuusuario  
