@@ -8,7 +8,9 @@ O **L.I.S.I. – Laboratório de Ciência Integrada & Inovação** é um laborat
 
 Nosso propósito é promover soluções tecnológicas éticas e de impacto social, integrando ciência, tecnologia e governança para um futuro cognitivo e colaborativo.
 
-👉 [Clique aqui para se inscrever no L.I.S.I.](https://forms.gle/NtqNs9Wt1mBdvKUF9k)
+<p align="center">
+  <a href="https://forms.gle/NtqNs9Wt1mBdvKUF9k" target="_blank" style="background-color: #004aad; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold;">Clique aqui para se inscrever no L.I.S.I.</a>
+</p>
 
 ---
 
