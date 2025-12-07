@@ -1,101 +1,1085 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>L.I.S.I. - Laboratório de Ciência Integrada & Inovação</title>
+  <meta charset="UTF-8" />
+  <title>L.I.S.I. – Laboratory of Integrated Science & Innovation | Ecossistema Quartzgroup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="L.I.S.I. – Laboratory of Integrated Science & Innovation. Laboratório do Ecossistema Quartzgroup dedicado a pesquisa aplicada, ciência integrada, inovação tecnológica e apoio a ICTs e startups deep tech." />
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #333;
+    :root {
+      --bg-body: #020617;
+      --bg-surface: #0b1220;
+      --bg-soft: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --accent-strong: #0ea5e9;
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --text-mute: #6b7280;
+      --border-soft: rgba(148, 163, 184, 0.3);
+      --card-border: rgba(148, 163, 184, 0.4);
+      --shadow-soft: 0 24px 60px rgba(15, 23, 42, 0.8);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --nav-height: 72px;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 40px 20px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
+      padding: 0;
     }
 
-    header img {
-      display: block;
-      margin: 0 auto 20px auto;
-      max-width: 300px;
-      height: auto;
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav-height);
     }
 
-    h1 {
-      color: #004aad;
-      font-size: 28px;
-      text-align: center;
-    }
-
-    p {
-      font-size: 18px;
+    body {
+      font-family: var(--font-sans);
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #000 100%);
+      color: var(--text-main);
       line-height: 1.6;
-      margin-bottom: 20px;
-      text-align: center;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a.button {
-      display: inline-block;
-      padding: 12px 24px;
-      margin: 10px 10px;
-      font-size: 16px;
-      color: #fff;
-      background-color: #004aad;
+    a {
+      color: inherit;
       text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
     }
 
-    a.button:hover {
-      background-color: #002f73;
+    ul {
+      list-style: none;
     }
 
-    .lang-button {
+    .page-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    /* NAVBAR */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.9),
+        transparent
+      );
+      border-bottom: 1px solid rgba(51, 65, 85, 0.7);
+    }
+
+    .nav-bar {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: radial-gradient(circle at 30% 20%, #38bdf8, transparent 55%),
+        radial-gradient(circle at 70% 80%, #22c55e, transparent 60%),
+        radial-gradient(circle at 120% -20%, #facc15, transparent 55%);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 10px 30px rgba(15, 23, 42, 0.85);
+    }
+
+    .brand-text h1 {
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-soft);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--text-soft);
+      padding: 6px 0;
+    }
+
+    .nav-links a::after {
+      content: "";
       position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 18px;
-      font-weight: bold;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #38bdf8, #22c55e);
+      transition: width 0.18s ease-out;
     }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, #22c55e, #38bdf8);
+      color: #020617;
+      font-size: 0.82rem;
+      font-weight: 600;
+      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.35);
+      border: 1px solid rgba(15, 23, 42, 0.6);
+    }
+
+    .nav-cta span {
+      font-size: 0.9rem;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding-top: 42px;
+      padding-bottom: 40px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .kicker {
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: clamp(2.1rem, 4vw, 2.7rem);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .hero-gradient {
+      background: radial-gradient(circle at 0 0, #38bdf8 0, transparent 55%),
+        radial-gradient(circle at 100% 120%, #22c55e 0, transparent 60%);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-soft);
+      max-width: 540px;
+      margin-bottom: 18px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      color: var(--text-soft);
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.35);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: var(--radius-pill);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 9px 18px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+        background 0.12s ease-out, border-color 0.12s ease-out,
+        color 0.12s ease-out;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #22c55e, #38bdf8);
+      color: #020617;
+      box-shadow: 0 18px 40px rgba(56, 189, 248, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 24px 55px rgba(56, 189, 248, 0.45);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.55);
+      color: var(--text-main);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .hero-footnote {
+      font-size: 0.78rem;
+      color: var(--text-mute);
+    }
+
+    .hero-diagram {
+      background: radial-gradient(circle at 10% 0, rgba(56, 189, 248, 0.35), transparent 55%),
+        radial-gradient(circle at 90% 100%, rgba(34, 197, 94, 0.35), transparent 58%);
+      border-radius: 26px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 18px 16px;
+    }
+
+    .diagram-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .diagram-title {
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #e5e7eb;
+    }
+
+    .diagram-tag {
+      font-size: 0.76rem;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--text-soft);
+    }
+
+    .diagram-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .diagram-card {
+      border-radius: 14px;
+      padding: 10px 11px;
+      background: rgba(2, 6, 23, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 0.8rem;
+    }
+
+    .diagram-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      margin-bottom: 2px;
+    }
+
+    .diagram-main {
+      font-weight: 500;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .diagram-sub {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+
+    .diagram-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+
+    .diagram-dot-row {
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .diagram-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.7);
+    }
+
+    /* SHARED SECTION STYLES */
+
+    section {
+      padding: 34px 0;
+      border-top: 1px solid rgba(15, 23, 42, 0.85);
+    }
+
+    .section-heading {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+
+    .section-lead {
+      font-size: 0.96rem;
+      color: var(--text-soft);
+      max-width: 640px;
+      margin-bottom: 18px;
+    }
+
+    .columns-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.4fr);
+      gap: 22px;
+      align-items: flex-start;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.76rem;
+      color: var(--text-soft);
+      margin-bottom: 12px;
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--card-border);
+      padding: 13px 14px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.75);
+    }
+
+    .card h3 {
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      margin-bottom: 6px;
+    }
+
+    .card ul {
+      padding-left: 16px;
+      margin-top: 4px;
+    }
+
+    .card li {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      margin-bottom: 2px;
+      list-style: disc;
+    }
+
+    /* ECOSSISTEMA & PROJETOS */
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--text-soft);
+    }
+
+    .projects-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.3fr);
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .projects-list ul {
+      padding-left: 16px;
+    }
+
+    .projects-list li {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      list-style: disc;
+      margin-bottom: 4px;
+    }
+
+    /* PARCERIAS & CONTATO */
+
+    .partnership-box {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      padding: 16px 15px;
+      margin-top: 8px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.3fr);
+      gap: 18px;
+    }
+
+    .contact-item {
+      font-size: 0.92rem;
+      color: var(--text-soft);
+      margin-bottom: 4px;
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-mute);
+    }
+
+    .contact-highlight {
+      font-size: 0.96rem;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: var(--radius-pill);
+      font-size: 0.86rem;
+      padding: 8px 16px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      margin-top: 8px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(8, 47, 73, 0.8);
+    }
+
+    /* FOOTER */
 
     footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 14px;
-      color: #777;
+      border-top: 1px solid rgba(15, 23, 42, 0.95);
+      background: #020617;
+      padding: 14px 0 20px;
+      font-size: 0.8rem;
+      color: var(--text-mute);
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-soft);
+      font-size: 0.8rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .columns-2,
+      .projects-list,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-diagram {
+        order: -1;
+      }
+
+      .nav-links {
+        display: none; /* simplificação em mobile */
+      }
+
+      .nav-bar {
+        padding-inline: 16px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
     }
   </style>
 </head>
+
 <body>
-
-  <div class="lang-button">
-    <a href="en/index.html">🌐 English</a>
-  </div>
-
-  <header>
-    <img src="logo-lisi.png" alt="Logomarca do L.I.S.I.">
+  <header class="site-header">
+    <div class="nav-bar">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div class="brand-text">
+          <h1>L.I.S.I.</h1>
+          <span>Laboratory of Integrated Science & Innovation</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#linhas">Linhas de Pesquisa</a>
+        <a href="#ecossistema">Ecossistema Quartzgroup</a>
+        <a href="#programas">Programas & Projetos</a>
+        <a href="#parcerias">Parcerias & ICT</a>
+        <a href="#contato" class="nav-cta">
+          <span>Falar com o L.I.S.I.</span>
+        </a>
+      </nav>
+    </div>
   </header>
 
-  <h1>L.I.S.I. – Laboratório de Ciência Integrada & Inovação</h1>
+  <main>
+    <div class="page-wrap" id="home">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="kicker">Pesquisa aplicada · Ciência integrada · Inovação</div>
+            <h2>
+              <span class="hero-gradient">L.I.S.I. – Laboratory of Integrated Science & Innovation</span><br />
+              Ciência, tecnologia e impacto a serviço do Ecossistema Quartzgroup.
+            </h2>
+            <p class="hero-subtitle">
+              Laboratório dedicado à pesquisa aplicada, à integração entre áreas do conhecimento
+              e ao desenvolvimento de soluções inovadoras em articulação com ICTs, empresas,
+              governos e startups deep tech.
+            </p>
 
-  <p>
-    O L.I.S.I. é um laboratório aberto, interdisciplinar e internacional dedicado à pesquisa, desenvolvimento e inovação nas áreas de Inteligência Artificial, Computação Quântica, Ética Digital e Educação Científica.
-  </p>
+            <div class="hero-badges">
+              <div class="badge">
+                <span class="badge-dot"></span>
+                Pesquisa aplicada &amp; inovação tecnológica
+              </div>
+              <div class="badge">
+                <span class="badge-dot"></span>
+                Integração com IFT, Techsol e demais unidades Quartzgroup
+              </div>
+            </div>
 
-  <p>
-    Nosso propósito é promover soluções tecnológicas éticas e de impacto social, integrando ciência, tecnologia e governança para um futuro cognitivo e colaborativo.
-  </p>
+            <div class="hero-actions">
+              <!-- TODO: ajustar e-mail quando a caixa oficial existir -->
+              <a class="btn-primary" href="mailto:contato@lisi-innovation.tec.br">
+                Falar com o L.I.S.I.
+              </a>
+              <a class="btn-ghost" href="https://quartzgroup.io" target="_blank" rel="noopener">
+                Conhecer o Ecossistema Quartzgroup
+              </a>
+            </div>
 
-  <p>
-    <a class="button" href="https://forms.gle/DsEy9J7SHXqwVjCF8" target="_blank">📝 Inscreva-se no L.I.S.I.</a>
-    <a class="button" href="manifesto.html">📜 Leia o Manifesto</a>
-  </p>
+            <div class="hero-footnote">
+              Hub de ciência integrada para projetos em inteligência artificial, cidades
+              inteligentes, sistemas complexos, meio ambiente e transformação digital.
+            </div>
+          </div>
+
+          <aside class="hero-diagram" aria-label="Mapa conceitual do L.I.S.I. no Ecossistema Quartzgroup">
+            <div class="diagram-header">
+              <div>
+                <div class="diagram-title">Papel no ecossistema</div>
+              </div>
+              <div class="diagram-tag">Research & Innovation Node</div>
+            </div>
+            <div class="diagram-grid">
+              <div class="diagram-card">
+                <div class="diagram-label">Foco central</div>
+                <div class="diagram-main">Ciência integrada &amp; P&amp;D aplicado</div>
+                <div class="diagram-sub">
+                  Projetos que conectam teoria, experimento e implementação em escala.
+                </div>
+              </div>
+              <div class="diagram-card">
+                <div class="diagram-label">Conexões</div>
+                <div class="diagram-main">ICTs · Empresas · Startups</div>
+                <div class="diagram-sub">
+                  Plataforma de colaboração para inovação aberta e deep tech.
+                </div>
+              </div>
+            </div>
+            <div class="diagram-footer">
+              <div>
+                <span style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-mute);">Domínios</span>
+                <div style="font-size:0.8rem;">
+                  IA · Sistemas complexos · Cidades · Meio ambiente
+                </div>
+              </div>
+              <div class="diagram-dot-row">
+                <span class="diagram-dot"></span>
+                <span class="diagram-dot"></span>
+                <span class="diagram-dot"></span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- QUEM SOMOS -->
+      <section id="quem-somos">
+        <div class="section-heading">Quem Somos</div>
+        <h2 class="section-title">Sobre o L.I.S.I.</h2>
+        <p class="section-lead">
+          O L.I.S.I. – Laboratory of Integrated Science & Innovation é o laboratório do
+          Ecossistema Quartzgroup dedicado à ciência integrada, à pesquisa aplicada e ao
+          desenvolvimento de soluções inovadoras com forte componente tecnológico.
+        </p>
+
+        <div class="columns-2">
+          <div>
+            <p>
+              Atuamos na interseção entre ciência, tecnologia e estratégia, conectando
+              pesquisadores, profissionais de mercado, gestores públicos e empreendedores
+              em projetos que exigem visão sistêmica e abordagem multidisciplinar.
+            </p>
+            <p style="margin-top:6px;">
+              O L.I.S.I. se articula diretamente com o IFT – Instituto de Formação e
+              Tecnologia, a Techsol, a Sinthesys Network e outras unidades, criando um
+              ambiente em que pesquisa, formação e implementação caminham de forma
+              coordenada.
+            </p>
+          </div>
+          <div>
+            <div class="pill">
+              <span class="pill-dot"></span>
+              Eixos de identidade científica e tecnológica
+            </div>
+            <div class="card">
+              <h3>Ciência Integrada</h3>
+              <p>
+                Integração de diferentes campos do conhecimento – engenharia, computação,
+                ciências sociais, direito, meio ambiente – para abordar problemas complexos.
+              </p>
+            </div>
+            <div class="card" style="margin-top:10px;">
+              <h3>Pesquisa Aplicada</h3>
+              <p>
+                Projetos orientados a resultados concretos, protótipos, pilotos e provas de
+                conceito, conectados a demandas reais de empresas, governos e sociedade.
+              </p>
+            </div>
+            <div class="card" style="margin-top:10px;">
+              <h3>Inovação &amp; Deep Tech</h3>
+              <p>
+                Apoio a startups deep tech, spin-offs, programas de inovação aberta e
+                projetos de alta complexidade tecnológica com potencial de impacto global.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LINHAS DE PESQUISA -->
+      <section id="linhas">
+        <div class="section-heading">Linhas de Pesquisa</div>
+        <h2 class="section-title">Domínios de atuação científico-tecnológica</h2>
+        <p class="section-lead">
+          O L.I.S.I. organiza sua atuação em linhas de pesquisa que dialogam com os
+          desafios contemporâneos em ciência, tecnologia, cidades, meio ambiente e
+          governança digital.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Inteligência Artificial &amp; Sistemas Cognitivos</h3>
+            <p>
+              Desenvolvimento e estudo de arquiteturas cognitivas, modelos de IA, sistemas
+              de apoio à decisão e aplicações em contextos reais.
+            </p>
+            <ul>
+              <li>Arquiteturas cognitivas (ex.: HOLOS / HALO).</li>
+              <li>IA aplicada a organizações, territórios e políticas públicas.</li>
+              <li>Assistentes inteligentes e sistemas de recomendação.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Cidades Inteligentes &amp; Sistemas Urbanos</h3>
+            <p>
+              Investigação de soluções para mobilidade, infraestrutura, serviços públicos,
+              segurança e qualidade de vida em ambientes urbanos complexos.
+            </p>
+            <ul>
+              <li>Sensoriamento, monitoramento e inteligência territorial.</li>
+              <li>Planejamento urbano apoiado por dados.</li>
+              <li>Interfaces entre cidadania digital e inovação urbana.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Meio Ambiente &amp; Resiliência de Biomas</h3>
+            <p>
+              Estudos e soluções focadas na proteção de biomas, prevenção de desastres e
+              construção de resiliência socioambiental.
+            </p>
+            <ul>
+              <li>Monitoramento de queimadas e desastres (ex.: PRESERVAR, Aero-Q).</li>
+              <li>Modelagem de risco ambiental e climático.</li>
+              <li>Ferramentas de apoio à decisão para gestores públicos.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Governança Digital &amp; Regulação de Tecnologias</h3>
+            <p>
+              Análise e desenvolvimento de frameworks de governança de TI, proteção de
+              dados, ética em IA e regulação de tecnologias emergentes.
+            </p>
+            <ul>
+              <li>Modelos de governança digital para organizações.</li>
+              <li>Integração com redes como a Sinthesys Network.</li>
+              <li>Estudos sobre regulação de IA e direitos digitais.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ECOSSISTEMA QUARTZGROUP -->
+      <section id="ecossistema">
+        <div class="section-heading">Ecossistema Quartzgroup</div>
+        <h2 class="section-title">Inserção do L.I.S.I. no ecossistema</h2>
+        <p class="section-lead">
+          O L.I.S.I. atua como nó científico e de inovação dentro do Ecossistema Quartzgroup,
+          aproximando pesquisa, formação, consultoria e implementação de soluções.
+        </p>
+
+        <div class="columns-2">
+          <div>
+            <p>
+              A Quartzgroup Technologies LLC coordena a visão estratégica global. O IFT – 
+              Instituto de Formação e Tecnologia estrutura a dimensão educacional e de ICT.
+              A Techsol cuida da engenharia aplicada e da implementação de projetos em
+              campo. O L.I.S.I. integra esses elementos por meio de pesquisa e inovação.
+            </p>
+            <p style="margin-top:6px;">
+              Juntos, esses componentes criam um ambiente em que ideias podem nascer em
+              programas de pesquisa, serem validadas em protótipos e pilotos, e depois
+              ganhar escala por meio de projetos estruturados com parceiros públicos,
+              privados e internacionais.
+            </p>
+          </div>
+          <div>
+            <div class="pill">
+              <span class="pill-dot"></span>
+              Unidades conectadas
+            </div>
+            <div class="chip-row">
+              <span class="chip">Quartzgroup Technologies LLC</span>
+              <span class="chip">IFT – Instituto de Formação e Tecnologia</span>
+              <span class="chip">Techsol – Soluções em Tecnologia</span>
+              <span class="chip">L.I.S.I. – Laboratory of Integrated Science & Innovation</span>
+              <span class="chip">Incubatech</span>
+              <span class="chip">Sinthesys Network</span>
+              <span class="chip">Aero-Q</span>
+              <span class="chip">PRESERVAR Cerrado</span>
+            </div>
+            <a
+              class="btn-secondary"
+              href="https://quartzgroup.io"
+              target="_blank"
+              rel="noopener"
+              style="margin-top:12px;"
+            >
+              Explorar o Ecossistema Quartzgroup
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRAMAS & PROJETOS -->
+      <section id="programas">
+        <div class="section-heading">Programas &amp; Projetos</div>
+        <h2 class="section-title">Programas estruturantes e frentes de P&amp;D</h2>
+        <p class="section-lead">
+          O L.I.S.I. organiza sua atuação em programas que articulam pesquisa, formação,
+          prototipagem e interação com empresas, governos e startups deep tech.
+        </p>
+
+        <div class="projects-list">
+          <div>
+            <p>
+              Exemplos de programas e frentes de trabalho que podem ser desenvolvidos:
+            </p>
+            <ul>
+              <li>
+                Programas de pesquisa aplicada em inteligência artificial e sistemas
+                cognitivos ligados à metodologia HOLOS / HALO.
+              </li>
+              <li>
+                Laboratórios vivos (living labs) de cidades inteligentes, mobilidade e
+                serviços públicos digitais.
+              </li>
+              <li>
+                Projetos integrados de monitoramento ambiental com redes de sensores e
+                análise avançada de dados.
+              </li>
+              <li>
+                Estudos sobre governança digital, proteção de dados e regulação de IA.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>
+              Esses programas se conectam de forma natural a:
+            </p>
+            <ul>
+              <li>Startups deep tech e spin-offs oriundos de pesquisa.</li>
+              <li>Projetos em parceria com ICTs, universidades e centros de pesquisa.</li>
+              <li>Contratos com empresas interessadas em P&amp;D estratégico.</li>
+              <li>
+                Iniciativas de políticas públicas baseadas em evidências e inteligência de dados.
+              </li>
+            </ul>
+            <p style="font-size:0.8rem; color:var(--text-mute); margin-top:6px;">
+              *Esta seção está preparada para evoluir para um portfólio com projetos
+              nomeados, à medida que forem consolidados com os parceiros.*
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARCERIAS & ICT -->
+      <section id="parcerias">
+        <div class="section-heading">Parcerias &amp; ICT</div>
+        <h2 class="section-title">Parcerias científicas, ICTs e startups deep tech</h2>
+        <p class="section-lead">
+          O L.I.S.I. é um ponto de articulação natural para parcerias que envolvem ICTs,
+          universidades, fundações, empresas e startups deep tech interessadas em pesquisa
+          aplicada e inovação de alto impacto.
+        </p>
+
+        <div class="partnership-box">
+          <p>
+            Em sinergia com o IFT – Instituto de Formação e Tecnologia e com a Techsol,
+            o L.I.S.I. ajuda a estruturar:
+          </p>
+          <ul style="margin-top:8px; padding-left:16px;">
+            <li>Projetos de P&amp;D cooperado entre empresas e ICTs.</li>
+            <li>
+              Convênios com universidades, centros de pesquisa e redes de inovação.
+            </li>
+            <li>
+              Programas de incubação e aceleração para startups deep tech e spin-offs.
+            </li>
+            <li>
+              Estruturas de governança de projetos de inovação, alinhadas à legislação de
+              ciência, tecnologia e inovação.
+            </li>
+          </ul>
+          <!-- TODO: trocar para e-mail definitivo de parcerias do L.I.S.I. -->
+          <a class="btn-secondary" href="mailto:parcerias@lisi-innovation.tec.br">
+            Propor parceria com o L.I.S.I.
+          </a>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato">
+        <div class="section-heading">Contato</div>
+        <h2 class="section-title">Fale com o L.I.S.I.</h2>
+        <p class="section-lead">
+          Se você representa uma ICT, universidade, empresa, órgão público ou startup e
+          deseja discutir um projeto em pesquisa aplicada, inovação ou deep tech, entre em
+          contato.
+        </p>
+
+        <div class="contact-grid">
+          <div>
+            <div class="contact-item">
+              <div class="contact-label">Unidade</div>
+              <div class="contact-highlight">
+                L.I.S.I. – Laboratory of Integrated Science &amp; Innovation
+              </div>
+              <div>
+                Laboratório de pesquisa integrada e inovação do Ecossistema Quartzgroup.
+              </div>
+            </div>
+            <div class="contact-item" style="margin-top:8px;">
+              <div class="contact-label">Ecossistema</div>
+              <div>
+                Quartzgroup · IFT · Techsol · L.I.S.I. · Incubatech · Sinthesys Network · Aero-Q · PRESERVAR.
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="contact-item">
+              <div class="contact-label">E-mail</div>
+              <!-- TODO: trocar para o e-mail definitivo Zoho quando configurado -->
+              <div class="contact-highlight">
+                <a href="mailto:contato@lisi-innovation.tec.br">
+                  contato@lisi-innovation.tec.br
+                </a>
+              </div>
+            </div>
+            <div class="contact-item" style="margin-top:8px;">
+              <div class="contact-label">Portais relacionados</div>
+              <div>
+                <a href="https://quartzgroup.io" target="_blank" rel="noopener">
+                  quartzgroup.io
+                </a>
+                &nbsp;·&nbsp;
+                <a href="https://ift-institute.org" target="_blank" rel="noopener">
+                  ift-institute.org
+                </a>
+              </div>
+            </div>
+            <!--
+            <div class="contact-item" style="margin-top:8px;">
+              <div class="contact-label">WhatsApp corporativo</div>
+              <div class="contact-highlight">
+                <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener">
+                  +55 (00) 00000-0000
+                </a>
+              </div>
+            </div>
+            -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
   <footer>
-    &copy; 2025 LISIInnovationLab
+    <div class="footer-inner">
+      <div>
+        &copy; <span id="year"></span> L.I.S.I. – Laboratory of Integrated Science &amp; Innovation.
+        Parte do Ecossistema Quartzgroup.
+      </div>
+      <div class="footer-links">
+        <a href="https://quartzgroup.io" target="_blank" rel="noopener">Quartzgroup</a>
+        <a href="https://ift-institute.org" target="_blank" rel="noopener">IFT</a>
+        <a href="#home">Voltar ao topo</a>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    // Atualiza ano automaticamente no rodapé
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
